@@ -12,20 +12,32 @@ In the project directory, you can run:
 Requirements
 ------------
 
-* Todo App must be able to add new todos TODO:done
+### Todo App must be able to add new todos
+- done - line 50 of app.js
+   
 
-* App must be able to edit todos
+### App must be able to edit todos
 
-* App must be able to delete todos TODO:done
+- not done
 
-* App must be able to remove (delete) completed todos
+### App must be able to delete todos 
+- done - line 20 of app.js --- grabs by id and deletes then updates array
 
-* App must use a minimum of 4 components
+### App must be able to remove (delete) completed todos
+- Not done
 
-* App must use useContext to pass todos from parent components to children components TODO: done
+### App must use a minimum of 4 components
+  - Almost, only 3 right now
 
-* App must use at least 1 custom hook
+### App must use useContext to pass todos from parent components to children components 
+- Used context to keep track of the main array from datastore --- found in src>context>todoContext.js
 
-* App must store todos in local storage and persist through a reload partially TODO:done
+### App must use at least 1 custom hook
+- not done, not really sure where to do this
 
-* App must be deployed to a live URL
+### App must store todos in local storage and persist through a reload partially 
+- datastore works but doesn't persist -- setIteams line 56 of app.js
+  
+### App must be deployed to a live URL
+
+- done

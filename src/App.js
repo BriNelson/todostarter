@@ -17,26 +17,29 @@ const PrintTask = () => {
     
  }, [userTaskArray]);
   
-  function deleteTask(id) {
+  function deleteTask(id, event) {
     let newArr = userTaskArray.filter(function (item) {
       return item._id !== id
     })
-    console.log(newArr)
+    console.log(event.target)
     setUserTaskArray(newArr)
   }
 
-  function completeTask(completedItem, index) {
-    if (completedItem === false) { localDataArray[index].completed = true } else if (completedItem === true) { localDataArray[index].completed = false }
-   
-    console.log(localDataArray)
-    setUserTaskArray(localDataArray)
+  function completeTask(completedItem, index, event) {
+    if (event.target.matches("li")) {
     
+      if (completedItem === false) { localDataArray[index].completed = true } else if (completedItem === true) { localDataArray[index].completed = false }
+    
+      console.log(event.target)
+    
+      setUserTaskArray(localDataArray)
+    }
   }
 
   return (
     <div>
       <ul class="todoList">
-        {localDataArray.map((todoItems, index) => (<li onClick={()=>completeTask(todoItems.completed, index)} className='done'>{todoItems.taskName}<span onClick={()=>deleteTask(todoItems._id)}> <i class="fa fa-trash"></i></span></li>))}
+        {localDataArray.map((todoItems, index) => (<li onClick={(event) => completeTask(todoItems.completed, index, event)} className={`${todoItems.completed ? 'done' : ''}`} >{todoItems.taskName}<span onClick={(event)=>deleteTask(todoItems._id, event)}> <i class="fa fa-trash"></i></span></li>))}
           
         </ul>
     </div>
