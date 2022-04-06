@@ -82,6 +82,7 @@ const EnterTasks = () => {
 
 const ClearPending = () => {
   const { userTaskArray, setUserTaskArray } = useContext(TodoContext);
+  const [pendingNum, setPendingNum] = useState('');
   function clearDone() {
     let newArr = userTaskArray.filter(function (item) {
       return item.completed === false
@@ -89,11 +90,24 @@ const ClearPending = () => {
     setUserTaskArray(newArr)
 
   
-}
+    
+  }
+
+
+  useEffect(() => {
+    
+    let newArr = userTaskArray.filter(function (item) {
+      return item.completed === false
+    })
+    setPendingNum(newArr.length) 
+    console.log(newArr.length)
+ }, [userTaskArray]);
+  
+ 
 
   return (
     <div>
-      <span>You have 1 pending tasks.</span>
+      <span>You have {pendingNum} pending tasks.</span>
         <button onClick={clearDone}>Clear Done</button>
       
     </div>

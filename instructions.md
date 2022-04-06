@@ -11,9 +11,9 @@ Requirements
 
 * App must be able to delete todos TODO:done
 
-* App must be able to remove (delete) completed todos
+* App must be able to remove (delete) completed todos TODO:done
 
-* App must use a minimum of 4 components
+* App must use a minimum of 4 components TODO:done
 
 * App must use useContext to pass todos from parent components to children components TODO: done
 
@@ -21,7 +21,7 @@ Requirements
 
 * App must store todos in local storage and persist through a reload partially TODO:done
 
-* App must be deployed to a live URL
+* App must be deployed to a live URL TODO:done
 
 When complete, turn in URLs to your Github repo and your live site.
 
