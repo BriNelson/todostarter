@@ -39,7 +39,7 @@ const PrintTask = () => {
   return (
     <div>
       <ul class="todoList">
-        {localDataArray.map((todoItems, index) => (<li onClick={(event) => completeTask(todoItems.completed, index, event)} className={`${todoItems.completed ? 'done' : ''}`} >{todoItems.taskName}<span onClick={(event)=>deleteTask(todoItems._id, event)}> <i class="fa fa-trash"></i></span></li>))}
+        {localDataArray.map((todoItems, index) => (<li onClick={(event) => completeTask(todoItems.completed, index, event)} className={`${todoItems.completed ? 'done' : ''}`} >{todoItems.taskName}<span className="editBtn"><i class="fa fa-edit"></i></span><span className="deleteBtn" onClick={(event)=>deleteTask(todoItems._id, event)}> <i class="fa fa-trash"></i></span></li>))}
           
         </ul>
     </div>

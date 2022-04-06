@@ -8,6 +8,7 @@
   --main-white: #fff;
   --sub-blue: #86C6F4;
   --sub-grey: #ccc;
+  --yellow: #FFBF00;
 }
 
 * {
@@ -95,7 +96,7 @@ button {
 }
 
 
-.todoList li span {
+.todoList li span.deleteBtn {
   position: absolute;
   right: -45px;
   width: 45px;
@@ -107,10 +108,25 @@ button {
   transition: all 0.3s ease;
 }
 
-.todoList li:hover span {
+.todoList li:hover span.deleteBtn {
   right: 0;
 }
 
+.todoList li span.editBtn {
+  position: absolute;
+  right: -45px;
+  width: 45px;
+  color: var(--main-white);
+  text-align: center;
+  background: var(--yellow);
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todoList li:hover span.editBtn {
+  right: 48px;
+}
 .wrapper .footer {
 /*   width: 100%; */
   display: flex;
