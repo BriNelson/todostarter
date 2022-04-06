@@ -80,6 +80,28 @@ const EnterTasks = () => {
 
 
 
+const ClearPending = () => {
+  const { userTaskArray, setUserTaskArray } = useContext(TodoContext);
+  function clearDone() {
+    let newArr = userTaskArray.filter(function (item) {
+      return item.completed === false
+    })
+    setUserTaskArray(newArr)
+
+  
+}
+
+  return (
+    <div>
+      <span>You have 1 pending tasks.</span>
+        <button onClick={clearDone}>Clear Done</button>
+      
+    </div>
+  );
+}
+
+
+
 
 
 
@@ -91,8 +113,7 @@ function App() {
         <EnterTasks/>
         <PrintTask />
       <div class="footer">
-        <span>You have 1 pending tasks.</span>
-        <button >Clear Done</button>
+        <ClearPending/>
         </div>
         </TodoContextProvider>
     </div>
