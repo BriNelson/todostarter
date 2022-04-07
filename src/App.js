@@ -1,7 +1,10 @@
+
 import TodoContextProvider from './context/TodoContext';
+
+
 import PrintTask from './components/PrintTask';
 import ClearPending from './components/ClearPending';
-import EnterTasks from './components/ClearPending';
+import EnterTasks from './components/EnterTask';
 
 
 
