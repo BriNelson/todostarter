@@ -37,8 +37,9 @@ const PrintTask = () => {
     }
   }
 
-  function saveEditTask() {
-    console.log(userTask);
+  function saveEditTask(index) {
+   localDataArray[index].taskName = userTask
+   setUserTaskArray(localDataArray);
     setShow(false)
   }
 
@@ -55,7 +56,7 @@ const PrintTask = () => {
             <span onClick={() => setShow(true)} className="editBtn">
               <i class="fa fa-edit"></i>
             </span>
-            {show ? <span onClick={saveEditTask} className="saveBtn">
+            {show ? <span onClick={() => saveEditTask(index)} className="saveBtn">
             <i class="fas fa-save"></i>
             </span>: null}
             <span
