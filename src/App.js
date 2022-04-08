@@ -1,24 +1,20 @@
+import TodoContextProvider from "./context/TodoContext";
 
-import TodoContextProvider from './context/TodoContext';
-
-
-import PrintTask from './components/PrintTask';
-import ClearPending from './components/ClearPending';
-import EnterTasks from './components/EnterTask';
-
-
+import PrintTask from "./components/PrintTask";
+import ClearPending from "./components/ClearPending";
+import EnterTasks from "./components/EnterTask";
 
 function App() {
   return (
     <div class="wrapper">
       <TodoContextProvider>
         <header>Todo List</header>
-        <EnterTasks/>
+        <EnterTasks />
         <PrintTask />
-      <div class="footer">
-        <ClearPending/>
+        <div class="footer">
+          <ClearPending />
         </div>
-        </TodoContextProvider>
+      </TodoContextProvider>
     </div>
   );
 }

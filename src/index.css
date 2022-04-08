@@ -127,6 +127,22 @@ button {
 .todoList li:hover span.editBtn {
   right: 48px;
 }
+
+.todoList li span.saveBtn {
+  position: absolute;
+  right: -45px;
+  width: 45px;
+  color: var(--main-white);
+  text-align: center;
+  background: var(--main-green);
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todoList li:hover span.saveBtn {
+  right: 48px;
+}
 .wrapper .footer {
 /*   width: 100%; */
   display: flex;
